@@ -104,4 +104,18 @@ location / {<br>
             &#60;?php } ?>
         </p>
     </ul>
+    <li>href Attribute for Project page menu or navigation</li>
+    <ul>
+        <li>Just look at this simple code below on how to call an existing page on your project from other pages inside your project</li>
+        <p style="border: 1px solid black">
+        &#60;a href="&#60;?=PAGE['domain']; ?>/newpage">New Page&#60;/a>
+        </p>
+    </ul>
+    <li>Display Page Information from config.php to Frontend</li>
+    <ul>
+        <li>Just look at this lines of codes below and replace the page information you want to display</li>
+        <p style="border: 1px solid black">
+        &#60;?=PAGE['copyright']; ?>
+        </p>
+    </ul>
 </ol>
