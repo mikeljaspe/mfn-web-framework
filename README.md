@@ -54,3 +54,54 @@ location / {<br>
 }
 </p>
 <h4>The Basic:</h4>
+<ol>
+    <li>Adding a New Page</li>
+    <ul>
+        <li>Open master.php inside route folder and add this piece of code:</li>
+        <p style="border: 1px solid black">
+            // PAGE TITLE<br>
+            elseif($_SERVER['REQUEST_URI'] == '/newpage') {<br>
+            &nbsp;&nbsp;require_once CONTROL."/newpage.php";<br>
+            &nbsp;&nbsp;require_once VIEW."/newpage.php";<br>
+            }
+        </p>
+        <li>Create new .php file with the name of your newpage inside control and view folder.</li>
+        <li>Remember that control files are for backend purposes and view file is for frontend.</li>
+        <li>Open your newpage.php in view folder and add this piece of codes then save</li>
+        <p style="border: 1px solid black">
+            &#60;title>Your New Page Title&#60;/title><br>
+            &#60;body><br>
+            &#60;!-- Your New Page Content --><br>
+            &#60;/body>
+        </p>
+        <li>Leave newpage.php inside control folder is you do not have any data processing to do.</li>
+        <li>Try your new page by accessing your IP or Domain then /newpage</li>
+    </ul>
+    <li>You can add your css code inside global.css inside resource/css folder if you do not want to include styling code on your html head.</li>
+    <li>You can add your javascript code inside init.js inside resource/js folder if you do not want to include script code on your html head.</li>
+    <li>Adding an Image</li>
+    <ul>
+        <li>Place the image you need inside resource/image folder.</li>
+        <li>Call the image using this piece of codes then save</li>
+        <p style="border: 1px solid black">
+            &#60;img src="&#60;?=IMAGE; ?>/yourimage.png" />
+        </p>
+    </ul>
+    <li>Display Array Content and Variables from Backend to Frontend</li>
+    <ul>
+        <li>Open newpage.php inside control folder and add this piece of codes then save</li>
+        <p style="border: 1px solid black">
+            &#60;?php<br>
+            $color = "red";<br>
+            $crayons = ["blue", "red", "green", "yellow"];
+        </p>
+        <li>Open newpage.php inside view folder and add this piece of codes inside content part then save</li>
+        <p style="border: 1px solid black">
+            Color &#60;?=$color; ?>&#60;br><br>
+            Crayons:&#60;br><br>
+            &#60;?php foreach($crayons as $temp) { ?><br>
+                &nbsp;&nbsp;&#60;?=$temp; ?>&#60;br><br>
+            &#60;?php } ?>
+        </p>
+    </ul>
+</ol>
