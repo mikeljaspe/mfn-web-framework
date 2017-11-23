@@ -1,4 +1,4 @@
-<h1>MFN Web Framework</h1>
+<h1>MFN Web Framework v1.0.0 public</h1>
 <h3>A Procedural PHP Framework</h3>
 <h4>What is MFN Web Framework?</h4>
 <p>
