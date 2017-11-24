@@ -13,7 +13,7 @@
 </p>
 <h4>Before you start using this framework follow this few steps:</h4>
 <ol>
-    <li>Simply copy index.php and src folder inside the mfn-web-framework folder to your project root folder.</li>
+    <li>Simply copy index.php and src folder inside the mwf folder to your project root folder.</li>
     <li>Change all the information needed for your project in config.php inside engine folder.</li>
     <li>Open your browser and go to the page domain or ip where your root project are running.</li>
     <li>If you see the welcome page then everything is working fine and ready for your very easy web development experience.</li>
@@ -118,4 +118,62 @@ location / {<br>
         &#60;?=PAGE['copyright']; ?>
         </p>
     </ul>
+</ol>
+<h4>The Database Manipulation:</h4>
+<p>
+    This guide requires mysql or mariadb and phpMyAdmin installed on your system<br>
+    Create new database called my_db<br>
+    Create new table named my_table<br>
+    Create 2 columns named my_name and my_email<br>
+    Don't forget to change your database credentials on config.php inside engine folder<br>
+</p>
+<ol>
+    <li>Insert Data</li>
+    <ul>
+        <li>Open backend file for example newpage.php inside control folder and add this lines of codes and save</li>
+        <p style="border: 1px solid black">
+            $insert_script = "INSERT INTO my_table (my_name, my_email) VALUES ('Keith', 'keith@email.com')";<br>
+        </p>
+        <li>Open frontend file for example newpage.php inside view folder and add this lines of codes then save and try</li>
+        <p style="border: 1px solid black">
+            &#60;?php if(mysqli_query(connect(), $insert_script)) { ?><br>
+                &nbsp;&nbsp;&#60;b>Data Inserted&#60;/b><br>
+            &#60;?php else { ?><br>
+                &nbsp;&nbsp;&#60;b>Data Insert Error&#60;/b><br>
+            &#60;?php } mysqli_close(connect()); ?>
+        </p>
+    </ul>
+    <li>Update Data</li>
+    <ul>
+        <li>Open backend file for example newpage.php inside control folder and add this lines of codes and save</li>
+        <p style="border: 1px solid black">
+            $update_script = "UPDATE my_table SET my_email='keith14@email.com' WHERE my_name='Keith'";<br>
+        </p>
+        <li>Open frontend file for example newpage.php inside view folder and add this lines of codes then save and try</li>
+        <p style="border: 1px solid black">
+            &#60;?php if(mysqli_query(connect(), $update_script)) { ?><br>
+                &nbsp;&nbsp;&#60;b>Data Updated&#60;/b><br>
+            &#60;?php else { ?><br>
+                &nbsp;&nbsp;&#60;b>Data Update Error&#60;/b><br>
+            &#60;?php } mysqli_close(connect()); ?>
+        </p>
+    </ul>
+    <li>Select Data</li>
+    <ul>
+        <li>Open backend file for example newpage.php inside control folder and add this lines of codes and save</li>
+        <p style="border: 1px solid black">
+            $select_script = "SELECT my_name, my_email FROM my_table";<br>
+            $result = mysqli_query(connect(), $select_script);<br>
+        </p>
+        <li>Open frontend file for example newpage.php inside view folder and add this lines of codes then save and try</li>
+        <p style="border: 1px solid black">
+        &#60;?php if($result) { while($temp = mysqli_fetch_assoc($result)) { ?><br>
+            &nbsp;&nbsp;&#60;b>Name:&#60;/b> &#60;?=$temp['my_name']; ?> &#60;b>Email:&#60;/b> &#60;?=$temp['my_email']; ?>&#60;br><br>
+         &#60;?php } }  else { ?><br>
+            &nbsp;&nbsp;&#60;b>Data Select Error&#60;/b><br>
+        &#60;?php } mysqli_close(connect()); ?>
+        </p>
+    </ul>
+    <li>NOTE</li>
+    <p>Database Manipulation is very easy just use the procedural way and instead of creating new connection everytime just add connect() functions on the syntax and add mysqli_close(connect()); in the end</p>
 </ol>
