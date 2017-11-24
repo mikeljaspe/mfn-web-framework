@@ -177,6 +177,8 @@ location / {<br>
     <li>NOTE</li>
     <p>Database Manipulation is very easy just use the procedural way and instead of creating new connection everytime just add connect() functions on the syntax and add mysqli_close(connect()); in the end</p>
 </ol>
-Use MFN Web Server for hassle free web development.<br>
+<p>
+You can use MFN Web Server for hassle free web development.<br>
 MFn Web Server packed with latest Nginx, PHP7, MariaDB and phpMyAdmin<br>
-visit https://webserver.mfns.solutions to download for free<br>
+visit https://webserver.mfns.solutions to download for free
+</p>
