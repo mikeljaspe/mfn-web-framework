@@ -1,1 +1,1 @@
-You can paste fonts files here
+You can put here your font files
