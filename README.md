@@ -182,5 +182,5 @@ location / {<br>
 <p>
 You can use MFN Portable Web Server for hassle free web development.<br>
 MFN Web Server packed with latest Nginx, PHP7, MariaDB and phpMyAdmin version<br>
-visit https://webserver.mfns.solutions to download for free
+visit https://webserver.mfn.solutions to download for free
 </p>
