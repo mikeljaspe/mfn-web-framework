@@ -1,4 +1,4 @@
-<h1>MFN Web Framework v1.0.0 public</h1>
+<h1>MFN Web Framework v1.0.0 public https://webframework.mfn.solutions</h1>
 <h3>A Procedural PHP Framework</h3>
 <h4>What is MFN Web Framework?</h4>
 <p>
@@ -184,3 +184,5 @@ You can use MFN Portable Web Server for hassle free web development.<br>
 MFN Web Server packed with latest Nginx, PHP7, MariaDB and phpMyAdmin version<br>
 visit https://webserver.mfn.solutions to download for free
 </p>
+<h4>For Issues and Questions</h4>
+<p>Just post an issue topic in github or email us at webframework@mfn.solutions</p>
