@@ -177,6 +177,8 @@ location / {<br>
     <li>NOTE</li>
     <p>Database Manipulation is very easy just use the procedural way and instead of creating new connection everytime just add connect() functions on the syntax and add mysqli_close(connect()); in the end</p>
 </ol>
+<h4>Notice</h4>
+<p>We will update this project and add more guides and hope you will enjoy using this PHP Framework. We will be glad if you are willing to contribute to this framework development, help us improve this framework!</p>
 <p>
 You can use MFN Portable Web Server for hassle free web development.<br>
 MFN Web Server packed with latest Nginx, PHP7, MariaDB and phpMyAdmin version<br>
