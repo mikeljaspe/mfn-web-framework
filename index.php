@@ -23,7 +23,7 @@
 
 // INITIALIZE
 $test_load = explode(' ', microtime())[0] + explode(' ', microtime())[1];
-// START SYSTEM SESSION
+// START SYSTEM SESSIONS
 session_start();
 // START SYSTEM ENGINE
 require_once 'src/engine/engine.php';
