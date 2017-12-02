@@ -20,6 +20,14 @@
     <li>Open your browser and go to the page domain or ip where your root project are running.</li>
     <li>If you see the welcome page then everything is working fine and ready for your very easy web development experience.</li>
 </ol>
+<h4>Domain and IP Configuration</h4>
+<ol>
+    <li>FOR WINDOWS: Open CMD and type ipconfig and copy the IPv4 address</li>
+    <li>FOR UNIX: Open Terminal and type ifconfig and copy the inet address</li>
+    <li>Open framework src > engine > config.php</li>
+    <li>In Page > Domain field replace 127.0.0.1 with the IPv4 address otherwise the domain</li>
+    <li>Start your web server and access your project using the IPv4 or the Domain using your browser</li>
+</ol>
 <h4>The Need to know first:</h4>
 <ul>
     <li>You do not need to change or alter index.php at any cases unless your logic requires it.</li>
